@@ -1,5 +1,8 @@
-spring:
-    application:
-        name: loicsmallwebapp
-        
-        
+server:
+  port: 8081
+  contextPath: /loicsmallwebapp
+
+#allow access actuator
+management:
+  security:
+    enabled: false
