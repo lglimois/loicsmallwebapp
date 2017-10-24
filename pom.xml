@@ -75,13 +75,13 @@
 		<!-- use the following if you're not using a snapshot version. -->
 		<repository>
 			<id>snapshots</id>
-			<name>libs-snapshots</name>
+			<name>snapshots</name>
 			<url>http://192.168.1.23:8080/artifactorys/libs-snapshots</url>
 		</repository>
 		<!-- use the following if you ARE using a snapshot version. -->
 		<snapshotRepository>
 			<id>central</id>
-			<name>libs-release</name>
+			<name>central</name>
 			<url>http://192.168.1.23:8080/artifactorys/libs-release</url>
 		</snapshotRepository>
 	</distributionManagement>
