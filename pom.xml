@@ -34,10 +34,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-data-jpa</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-data-jpa</artifactId> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -71,5 +71,19 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<!-- use the following if you're not using a snapshot version. -->
+		<repository>
+			<id>snapshots</id>
+			<name>libs-snapshots</name>
+			<url>http://192.168.1.23:8080/artifactorys/libs-snapshots</url>
+		</repository>
+		<!-- use the following if you ARE using a snapshot version. -->
+		<snapshotRepository>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>http://192.168.1.23:8080/artifactorys/libs-release</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
