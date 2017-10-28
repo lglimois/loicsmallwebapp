@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-		"fr.sh.wa.loicsmallwebapp.common.running",
+		"fr.sh.wa.loicsmallwebapp.running",
 		"fr.sh.wa.loicsmallwebapp.hello"} )
 public class LoicsmallwebappApplication {
 

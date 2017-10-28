@@ -1,4 +1,4 @@
-package fr.sh.wa.loicsmallwebapp.common.running;
+package fr.sh.wa.loicsmallwebapp.running;
 
 public class SimpleRunningBean {
 
