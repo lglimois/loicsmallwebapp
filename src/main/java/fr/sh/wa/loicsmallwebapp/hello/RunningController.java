@@ -6,20 +6,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@Controller
-@RestController
-public class HelloController {
+@Controller
+public class RunningController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
 
-    /*@RequestMapping("/")
-	public String welcome(Map<String, Object> model) {
-		model.put("message", "message en dur");
-		return "welcome";
-	}*/
+    @RequestMapping("/running")
+	public String runningpage(Map<String, Object> model) {
+		model.put("message", "Cest moi qui run");
+		return "simplerunning";
+	}
     
     /*@RequestMapping("/list")
     public String getList() {

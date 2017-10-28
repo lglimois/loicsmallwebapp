@@ -1,8 +1,17 @@
-server:
-  port: 8081
-  contextPath: /loicsmallwebapp
+#server:
+#  port: 8081
+#  contextPath: /loicsmallwebapp
 
 #allow access actuator
 management:
   security:
     enabled: false
+
+#spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
+#
+#welcome:
+#  message: Hello Mkyong

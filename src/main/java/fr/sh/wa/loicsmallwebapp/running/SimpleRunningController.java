@@ -2,6 +2,8 @@ package fr.sh.wa.loicsmallwebapp.running;
 
 
 
+import java.util.Collection;
+
 import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility; 
 //import org.codehaus.jackson.annotate.JsonMethod; 
 
@@ -17,17 +19,21 @@ public class SimpleRunningController {
 
 	@RequestMapping("/listsimplerunning")
     public String list() throws JsonProcessingException {
-		SimpleRunningBean bean = new SimpleRunningBean(1, 2,3);
+		
+		SimpleRunningService runningService = new SimpleRunningServiceImpl();
+		Collection c = runningService.getList();
 		
 		ObjectMapper mapper = new ObjectMapper();
-		mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
-                .withFieldVisibility(JsonAutoDetect.Visibility.ANY));
+
+		/* Pas besoin si on a généré les getter
+		 * mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
+                .withFieldVisibility(JsonAutoDetect.Visibility.ANY));*/
 	
 		//mapper.setVisibility(JsonMethod.FIELD, Visibility.ANY);
 		//mapper.setVisibility(JsonMethod.FIELD, JsonAutoDetect.Visibility.ANY);
 				
 		//Object to JSON in String
-		String jsonInString = mapper.writeValueAsString(bean);
+		String jsonInString = mapper.writeValueAsString(c);
 		
         return jsonInString;
     }
